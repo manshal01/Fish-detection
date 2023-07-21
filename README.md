@@ -1,5 +1,7 @@
 # Fish-detection
 This code is a Python script that creates a graphical user interface (GUI) application using the Tkinter library. The purpose of this application is to predict the species of fish in an image or video. It uses a pre-trained deep learning model called InceptionV3, which is trained on the ImageNet dataset
+
+
 ![Screenshot (17)](https://github.com/manshal01/Fish-detection/assets/93897590/539994a6-67c2-4c0d-87b4-11e548d80883)
 
 Let's go through the code line by line:
@@ -17,6 +19,9 @@ This imports the necessary libraries for the application, including Tkinter for 
 model = tf.keras.applications.InceptionV3()
 This line loads the InceptionV3 model pre-trained on the ImageNet dataset.
 
+![Screenshot (18)](https://github.com/manshal01/Fish-detection/assets/93897590/abb729eb-54fa-40aa-8af5-992fd989be7d)
+
+
 def predict_image():
     ...
 This function is called when the "Predict Image" button is clicked. It performs prediction on an image by first getting the image path from the entry field, loading and resizing the image to (299, 299) using PIL, converting the image to a NumPy array, preprocessing the image using the InceptionV3 preprocessing function, using the InceptionV3 model to predict the species of fish in the image, decoding the predictions to get the top 5 predicted species, and updating the result label with the predicted species.
@@ -24,6 +29,9 @@ This function is called when the "Predict Image" button is clicked. It performs 
 def predict_species():
     ...
 This function is called when the "Predict Species" button is clicked. It is not fully implemented, but it is intended to perform prediction on a video. It gets the video path from the entry field and uses the InceptionV3 model to predict the species of fish in the video. However, the code for this functionality is missing and needs to be added.
+
+![Screenshot (19)](https://github.com/manshal01/Fish-detection/assets/93897590/7e93fa96-5250-4294-a5cf-631028e864c8)
+
 
 def reset_input():
     ...
